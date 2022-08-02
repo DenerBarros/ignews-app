@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
-import styles from '../styles/home.module.scss';
+
 import Head from 'next/head';
-import Link from 'next/head';
+
 
 
 const Home: NextPage = () => {
@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     <Head>
       <title>Inicio | ig.news</title>
     </Head>
-    <h1 className={styles.title}>      
+    <h1>      
       Ola
     </h1>
   </>
