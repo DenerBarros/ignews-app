@@ -1,14 +1,20 @@
-import type { AppProps } from 'next/app'
-import { Header } from '../components/Header';
-import { SessionProvider  as NextAuthProvider} from 'next-auth/react'
+import { Provider as NextAuthProvider} from 'next-auth/client'
+import { AppProps } from 'next/app'
+import { Header } from '../components/Header'
+import NextNprogress from 'nextjs-progressbar';
 
-
-import '../styles/global.scss';
+import '../styles/global.scss'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <NextAuthProvider session={pageProps.session}>
-      <Header/>
+      <NextNprogress
+        color="#eba417"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={3}
+      />
+      <Header />
       <Component {...pageProps} />
     </NextAuthProvider>
   )
